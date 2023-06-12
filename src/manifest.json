@@ -3,6 +3,23 @@
   "name": "叫号助手",
   "description": "为叫号提供帮助aa",
   "version": "1.0.0",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "options_page": "options.html",
   "action": {
     "default_popup": "popup.html",
     "default_title": "叫号助手",
@@ -11,12 +28,5 @@
       "24": "images/icon-32.png",
       "32": "images/icon-32.png"
     }
-  },
-  "icons": {
-    "16": "images/icon-16.png",
-    "32": "images/icon-32.png",
-    "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
-  },
-  "options_page": "options.html"
+  }
 }

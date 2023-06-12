@@ -18,11 +18,14 @@ export default defineConfig((env) => ({
         popup: path.resolve(__dirname, 'popup.html'),
         options: path.resolve(__dirname, 'options.html'),
         background: path.resolve(__dirname, 'src/background/index.ts'),
+        contentScript: path.resolve(__dirname, 'src/contentScript/index.ts'),
       },
       output: {
         entryFileNames(chunkInfo) {
           if (chunkInfo.name === 'background') {
             return 'background.js'
+          } else if (chunkInfo.name === 'contentScript') {
+            return 'contentScript.js'
           } else {
             return `assets/[name].js`
           }
