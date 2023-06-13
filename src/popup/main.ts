@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import App from './index.vue'
-import '../manifest.json'
+import App from './App.vue'
 
 createApp(App).mount('#app')

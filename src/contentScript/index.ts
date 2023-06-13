@@ -1,1 +1,4 @@
-console.log('hello content-script')
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App).mount('#ad-intercept-chrome-extension-demo')
